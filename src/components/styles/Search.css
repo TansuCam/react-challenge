@@ -1,0 +1,23 @@
+.search {
+  position: relative;
+  box-shadow: 0 0 40px rgba(51, 51, 51, 0.1);
+}
+
+.search input {
+  height: 48px;
+  text-indent: 35px;
+  border: 1px solid #000;
+  border-radius: 12px;
+}
+
+.search input:focus {
+  box-shadow: none;
+  border: 2px solid rgba(32, 64, 128, 1);
+}
+
+.search svg {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  margin-right: 15px;
+}
