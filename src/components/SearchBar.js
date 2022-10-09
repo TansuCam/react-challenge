@@ -4,7 +4,7 @@ import Button from "./Button";
 import SearchList from "./SearchList";
 import SearchIcon from "./icons/SearchIcon";
 
-function SearchBar({ placeholder, mockData }) {
+function SearchBar({ placeholder, mockData, value, listPage = false }) {
   const style = {
     width: "100%",
     gridGap: "6px",
@@ -14,12 +14,23 @@ function SearchBar({ placeholder, mockData }) {
 
   const handleFilter = (event) => {
     setSearchWord(event.target.value);
-    const newFilter = mockData.data.filter((item) => {
-      return item
-        .join(",")
-        .toLowerCase()
-        .includes(searchWord.toLowerCase().trim());
-    });
+    var newFilter;
+    if (listPage) {
+      newFilter = mockData.filter((item) => {
+        return item
+          .join(",")
+          .toLowerCase()
+          .includes(searchWord.toLowerCase().trim());
+      });
+    } else {
+      newFilter = mockData.data.filter((item) => {
+        return item
+          .join(",")
+          .toLowerCase()
+          .includes(searchWord.toLowerCase().trim());
+      });
+    }
+
     setFilteredData(newFilter);
   };
   return (
@@ -28,14 +39,19 @@ function SearchBar({ placeholder, mockData }) {
         <SearchIcon className="search-icon" />
         <input
           type="text"
-          className="form-control"
+          className="form-control searchbarrr"
           placeholder={placeholder}
           onChange={handleFilter}
+          value={value}
         />
         <Button onClick="handleSearch()">Search</Button>
       </div>
       {filteredData.length !== 0 && searchWord.length >= 2 && (
-        <SearchList searchWord={searchWord} data={filteredData}></SearchList>
+        <SearchList
+          listPage={listPage}
+          searchWord={searchWord}
+          data={filteredData}
+        ></SearchList>
       )}
     </div>
   );
