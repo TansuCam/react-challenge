@@ -7,17 +7,19 @@ import "./styles/Search.css";
 function SearchList({ data, searchWord, listPage = false }) {
   const sliceData = data.slice(0, 3);
   const navigate = useNavigate();
+
   const seeMore = () => {
     navigate("/listpage", {
       state: { dataList: data, searchWord: searchWord },
     });
   };
+
   return (
     <div>
       {!listPage && (
         <div className="search-list">
-          {sliceData.map((val) => {
-            return <Search data={val}></Search>;
+          {sliceData.map((val, index) => {
+            return <Search key={index} data={val}></Search>;
           })}
           {data.length > 3 && (
             <div className="d-flex justify-content-center mt-3">
@@ -34,11 +36,11 @@ function SearchList({ data, searchWord, listPage = false }) {
       )}
       {listPage && (
         <div className="result-list">
-          {data.map((val) => {
+          {data.map((val, index) => {
             return (
               <>
                 <div
-                  key={val[0]}
+                  key={index + "11"}
                   className="search-result d-flex align-items-center mt-2"
                 >
                   <LocationIcon></LocationIcon>

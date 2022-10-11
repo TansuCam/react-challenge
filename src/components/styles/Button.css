@@ -17,3 +17,8 @@
   background: rgba(79, 117, 194, 1);
   color: #fff;
 }
+
+.primary-button:disabled {
+  background: rgb(168, 168, 168);
+  color: #fff;
+}

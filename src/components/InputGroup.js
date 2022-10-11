@@ -1,18 +1,17 @@
-function InputGroup() {
+import "./styles/Search.css";
+function InputGroup(props) {
   return (
-    <div className="mb-3">
-      <label htmlFor="" className="form-label">
-        Email address
-      </label>
+    <div className={`mb-4 input-custom ${props.error === "" ? "" : "error"}`}>
+      <label className="form-label">{props.title}</label>
       <input
-        type="email"
+        autoComplete="off"
+        name={props.name}
+        type={props.type}
         className="form-control"
-        id=""
-        aria-describedby="emailHelp"
+        placeholder={props.placeholder}
+        onBlur={props.onBlur}
       />
-      <div className="form-text">
-        We'll never share your email with anyone else.
-      </div>
+      <div className="form-text">{props.error}</div>
     </div>
   );
 }

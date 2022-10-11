@@ -1,6 +1,7 @@
 import * as React from "react";
 import SearchBar from "./SearchBar";
 import Button from "./Button";
+
 import Logo from "./tesodev.png";
 import "./styles/Search.css";
 import { useLocation, Link } from "react-router-dom";
@@ -19,7 +20,6 @@ function SearchResult() {
         <div className="w-75 mt-3">
           <SearchBar
             listPage={true}
-            mockData={location.state.dataList}
             value={location.state.searchWord}
           ></SearchBar>
         </div>
@@ -29,16 +29,6 @@ function SearchResult() {
           </Link>
         </div>
       </div>
-      {/* <div className="result-list">
-        {location.state.dataList.map((val) => {
-          return (
-            <>
-              <Search data={val} listPage={true}></Search>
-              <hr></hr>
-            </>
-          );
-        })}
-      </div> */}
     </div>
   );
 }

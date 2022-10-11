@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Button from "./Button";
 import Logo from "./tesodev.png";
 import SearchBar from "./SearchBar";
-var mockData = require("../mockData.json");
 
 function Landing() {
   return (
@@ -18,7 +17,7 @@ function Landing() {
       </div>
       <div className="search-div">
         <h3 className="bold-text-1">Find in records</h3>
-        <SearchBar placeholder="Search" mockData={mockData}></SearchBar>
+        <SearchBar placeholder="Search"></SearchBar>
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import "./styles/Search.css";
 function Alert() {
   return (
     <div>
-      <div class="alert alert-success">
+      <div className="alert alert-success">
         <strong>Success!</strong> This alert box could indicate a successful or
         positive action.
       </div>
