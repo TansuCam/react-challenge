@@ -12,15 +12,17 @@ function SearchResult() {
   return (
     <div className="list-page">
       <div className="d-flex my-3 mx-5">
-        <img
-          alt="logo"
-          style={{ width: "150px", height: "70px", marginRight: "30px" }}
-          src={Logo}
-        />
+        <Link to="/">
+          <img
+            alt="logo"
+            style={{ width: "150px", height: "70px", marginRight: "30px" }}
+            src={Logo}
+          />
+        </Link>
         <div className="w-75 mt-3">
           <SearchBar
             listPage={true}
-            value={location.state.searchWord}
+            value={location?.state?.searchWord ? location.state.searchWord : ""}
           ></SearchBar>
         </div>
         <div className="mt-3">

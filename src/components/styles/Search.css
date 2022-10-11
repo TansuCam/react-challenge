@@ -82,6 +82,12 @@
   position: absolute;
   bottom: 30px;
   right: 30px;
+  width: 375px;
+  height: 123px;
+  border-radius: 8px;
+  background: #c4c4c4;
+  border: none;
+  color: black;
 }
 .form-control {
   border: 1.5px solid #484848;
@@ -112,8 +118,13 @@
   cursor: pointer;
 }
 .return-list span {
+  text-decoration: none;
+  color: black;
   font-size: 24px;
   font-weight: 700;
+}
+.return-list a {
+  text-decoration: none;
 }
 .addlink .form-text {
   height: 10px;
@@ -217,4 +228,33 @@
   outline: none;
   visibility: hidden;
   opacity: 0;
+}
+.alert .btn-close {
+  border: 1px solid black;
+  padding: 7px;
+  margin: 10px;
+  border-radius: 50px;
+  font-size: 8px;
+  color: black;
+  opacity: 1;
+}
+.alert span {
+  position: absolute;
+  right: 30px;
+  height: 32px;
+  top: 45px;
+  background: #ff4e78;
+  padding: 3px;
+  color: white;
+  border-radius: 48px;
+  width: 70px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+.alert strong {
+  font-size: 14px;
+}
+.alert p {
+  font-size: 13px;
 }

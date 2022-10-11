@@ -1,11 +1,11 @@
 import * as React from "react";
 import "./styles/Button.css";
 
-function Button({ children, type = "button", isDisable = false, onClick }) {
+function Button({ children, type = "button", disabled = false, onClick }) {
   return (
     <button
       type={type}
-      disabled={isDisable}
+      disabled={disabled}
       className="btn primary-button"
       onClick={onClick}
     >

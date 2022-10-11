@@ -1,12 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles/Search.css";
 
-function Alert() {
+function Alert(props) {
+  const [hide, setHide] = useState("hide");
   return (
     <div>
-      <div className="alert alert-success">
-        <strong>Success!</strong> This alert box could indicate a successful or
-        positive action.
+      <div
+        className={`alert alert-warning alert-dismissible fade ${props.visible} ${hide}`}
+        role="alert"
+      >
+        <div className="w-75 mt-2 ms-1">
+          <strong>Error while adding link element</strong>
+          <p className="mt-3">
+            Name and surname should contain at least 2 words
+          </p>
+        </div>
+        <button
+          type="button"
+          className="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+          onClick={() => setHide("d-none")}
+        ></button>
+        <span>Error</span>
       </div>
     </div>
   );

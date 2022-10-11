@@ -14,12 +14,6 @@ function SearchBar({ placeholder, value, listPage = false }) {
   const [sort, setSort] = useState("");
   const [filteredData, setFilteredData] = useState([]);
   const [searchWord, setSearchWord] = useState(value ? value : "");
-
-  function ascName() {
-    setFilteredData(filteredData.sort((a, b) => (a[0] > b[0] ? 1 : -1)));
-    console.log(filteredData);
-  }
-
   useEffect(() => {
     search();
   }, [searchWord]);
