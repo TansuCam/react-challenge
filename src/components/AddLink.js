@@ -4,7 +4,7 @@ import InputGroup from "./InputGroup";
 import Alert from "./Alert";
 import Button from "./Button";
 import ArrowIcon from "../components/icons/ArrowIcon";
-import Logo from "./tesodev.png";
+import Logo from "./img/tesodev.png";
 
 import "./styles/Search.css";
 var mockData = require("../mockData.json");
@@ -116,10 +116,11 @@ function AddLink() {
             src={Logo}
           />
         </Link>
-        <div className="d-flex return-list align-items-center">
-          <ArrowIcon></ArrowIcon>
+        <div className="d-flex return-list align-items-center mt-3">
           <Link to="/listPage">
-            <span className="ms-2">Return to List Page</span>
+            <p>
+              <ArrowIcon></ArrowIcon> Return to List Page
+            </p>
           </Link>
         </div>
       </div>

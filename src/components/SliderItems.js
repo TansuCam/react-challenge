@@ -1,5 +1,5 @@
 import * as React from "react";
-import sliderImg from "../components/sliderImg.png";
+import sliderImg from "./img/sliderImg.png";
 
 const ItemSlider = () => {
   return (

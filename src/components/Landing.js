@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "./Button";
-import Logo from "./tesodev.png";
-import FooterImg from "./footerImg.png";
+import Logo from "./img/tesodev.png";
+import FooterImg from "./img/footerImg.png";
 import Slider from "./Slider";
 import SearchBar from "./SearchBar";
-import "./Landing.css";
+import "./styles/Landing.css";
 
 function Landing() {
   return (
@@ -15,8 +15,12 @@ function Landing() {
           <Button type="button">Add new record</Button>
         </Link>
       </div>
-      <div className="d-flex justify-content-center logo mt-5">
-        <img alt="logo" src={Logo} />
+      <div
+        className="d-flex justify-content-center align-items-center logo mt-5"
+        style={{ flexDirection: "column", flexWrap: "wrap" }}
+      >
+        <img alt="logo" src={Logo} width="280" />
+        <p className="search-app-text">Search app</p>
       </div>
       <div className="search-div">
         <h3 className="bold-text-1">Find in records</h3>
@@ -42,8 +46,8 @@ function Landing() {
           </div>
           <div className="me-2">
             <iframe
-              title="AkinonMap"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.281307874507!2d28.887040115673273!3d41.01910112670717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cabae205ad09c9%3A0x1044360e0f062f8c!2sAkinon!5e0!3m2!1str!2str!4v1665557340358!5m2!1str!2str"
+              title="TesodevMap"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.279562038667!2d28.888759415673352!3d41.01913932670472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cabb7abf29ba35%3A0xc98f44e9057adcde!2zVGVzb2RldiBZYXrEsWzEsW0gRG9uYW7EsW0gQmlsacWfaW0gQml5b21lZGlrYWwgS29uZ3JlIFR1cml6bSBFxJ9pdGltIERhbsSxxZ9tYW5sxLFrIExpbWl0ZWQgxZ5pcmtldGk!5e0!3m2!1str!2str!4v1665666063022!5m2!1str!2str"
               width="470"
               height="240"
               style={{ border: 0 }}

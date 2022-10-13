@@ -15,7 +15,8 @@
 }
 .search-div {
   margin-left: 25.5%;
-  margin-top: 4%;
+  margin-top: 3%;
+  width: 55%;
 }
 .search-detail small {
   color: #72777a;
@@ -118,8 +119,8 @@
 .return-list {
   cursor: pointer;
 }
-.return-list span {
-  text-decoration: none;
+.return-list p {
+  text-decoration: none !important;
   color: black;
   font-size: 24px;
   font-weight: 700;
@@ -140,7 +141,7 @@
 .list-page .dropdown {
   position: absolute;
   top: 130px;
-  right: 16vw;
+  right: 150px;
 }
 .list-page .dropdown-menu {
   position: relative !important;
@@ -268,4 +269,9 @@
   border: 1px solid #484848;
   border-radius: 4px;
   text-align: center;
+  padding-inline: 10px;
+}
+.active {
+  background-color: #204080 !important;
+  color: #fff;
 }

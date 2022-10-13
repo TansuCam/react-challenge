@@ -1,1 +1,25 @@
-
+.top-news {
+  font-size: 32px;
+  font-weight: 700;
+  margin-left: 15vw;
+  margin-top: 150px;
+}
+footer {
+  background-color: #294e98b8;
+  height: 280px;
+  color: white;
+  margin-top: 150px;
+  margin-inline: -11px;
+}
+.footer-info {
+  width: 320px;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+.search-app-text {
+  width: 350px;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 10px;
+}

@@ -1,8 +1,8 @@
 import React from "react";
 import SliderItems from "./SliderItems.js";
-import "../components/styles/Slider.css";
-import leftAction from "../components/LeftActionable.png";
-import RightAction from "../components/RightActionable.png";
+import "./styles/Slider.css";
+import leftAction from "./img/LeftActionable.png";
+import RightAction from "./img/RightActionable.png";
 
 const Slider = () => {
   const btnpressprev = () => {
