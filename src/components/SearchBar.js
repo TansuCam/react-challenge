@@ -14,12 +14,14 @@ function SearchBar({ placeholder, value, listPage = false }) {
   const [sort, setSort] = useState("");
   const [filteredData, setFilteredData] = useState([]);
   const [searchWord, setSearchWord] = useState(value ? value : "");
+
   useEffect(() => {
     search();
   }, [searchWord]);
 
   useEffect(() => {
     const dataArray = [...filteredData];
+
     var newData = [];
     if (sort === "ascname") {
       newData = dataArray.sort((a, b) => (a[1] > b[1] ? 1 : -1));
@@ -44,6 +46,7 @@ function SearchBar({ placeholder, value, listPage = false }) {
         .toLowerCase()
         .includes(searchWord.toLowerCase().trim());
     });
+
     setFilteredData(newFilter);
   };
 
@@ -107,9 +110,9 @@ function SearchBar({ placeholder, value, listPage = false }) {
       )}
       {filteredData.length !== 0 && searchWord.length >= 2 && (
         <SearchList
-          listPage={listPage}
           searchWord={searchWord}
           data={filteredData}
+          listPage={listPage}
         ></SearchList>
       )}
     </div>

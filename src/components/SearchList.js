@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Search from "./Search";
 import { useNavigate } from "react-router-dom";
 import LocationIcon from "./icons/LocationIcon";
@@ -7,12 +7,26 @@ import "./styles/Search.css";
 function SearchList({ data, searchWord, listPage = false }) {
   const sliceData = data.slice(0, 3);
   const navigate = useNavigate();
+  const [currentPage, setCurrentPage] = useState(1);
+  const [dataPagination, setDataPagination] = useState([]);
 
   const seeMore = () => {
     navigate("/listpage", {
       state: { dataList: data, searchWord: searchWord },
     });
   };
+
+  const page = Math.ceil(data.length / 5);
+
+  useEffect(() => {
+    var newFilter = [...data];
+    if (listPage) {
+      const lastData = currentPage * 5;
+      const firstData = lastData - 5;
+      const filterDataPage = newFilter.slice(firstData, lastData);
+      setDataPagination(filterDataPage);
+    }
+  }, [currentPage, data]);
 
   return (
     <div>
@@ -36,7 +50,7 @@ function SearchList({ data, searchWord, listPage = false }) {
       )}
       {listPage && (
         <div className="result-list">
-          {data.map((val, index) => {
+          {dataPagination.map((val, index) => {
             return (
               <>
                 <div
@@ -64,6 +78,17 @@ function SearchList({ data, searchWord, listPage = false }) {
               </>
             );
           })}
+          <div className="d-flex pagination-container">
+            <button>Previous</button>
+            {[...Array(page)].map((val, index) => {
+              return (
+                <button onClick={(e) => setCurrentPage(index + 1)}>
+                  {index + 1}
+                </button>
+              );
+            })}
+            <button>Next</button>
+          </div>
         </div>
       )}
     </div>
