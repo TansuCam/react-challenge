@@ -62,8 +62,11 @@ function AddLink() {
 
     if (
       fullnameLen >= 4 &&
+      fullnameLen <= 60 &&
       countryLen >= 2 &&
+      countryLen <= 40 &&
       cityLen >= 2 &&
+      cityLen <= 40 &&
       emailValidation.test(mail)
     ) {
       setisSubmit(false);
