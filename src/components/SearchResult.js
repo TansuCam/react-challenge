@@ -68,7 +68,7 @@ function SearchResult({ placeholder, value, listPage = false, onClick }) {
           className="form-control"
           placeholder={placeholder}
           value={searchWord}
-          onChange={(e) => setSearchWord(e.target.value)}
+          onChange={(e) => setSearchWord(e.target.value.trim())}
         />
         {listPage ? (
           <div>
