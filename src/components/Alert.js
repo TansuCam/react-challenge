@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./styles/Search.css";
+import "./styles/AddLink.css";
 
 function Alert(props) {
   const [hide, setHide] = useState("hide");

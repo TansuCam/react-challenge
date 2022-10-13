@@ -6,7 +6,7 @@ import Button from "./Button";
 import ArrowIcon from "../components/icons/ArrowIcon";
 import Logo from "./img/tesodev.png";
 
-import "./styles/Search.css";
+import "./styles/AddLink.css";
 var mockData = require("../mockData.json");
 
 function AddLink() {
@@ -61,7 +61,7 @@ function AddLink() {
     const mail = stateInput.mail;
 
     if (
-      fullnameLen >= 2 &&
+      fullnameLen >= 4 &&
       countryLen >= 2 &&
       cityLen >= 2 &&
       emailValidation.test(mail)
@@ -77,8 +77,8 @@ function AddLink() {
     const val = element.value;
 
     if (element.getAttribute("name") === "fullname") {
-      if (val.length < 2) {
-        setfullnameError("You must enter at least two letters.");
+      if (val.length < 4) {
+        setfullnameError("You must enter at least four letters.");
       } else {
         setfullnameError("");
       }
@@ -130,6 +130,7 @@ function AddLink() {
           onKeyDown={handleKeyPress}
           name={"fullname"}
           title={"Name Surname"}
+          maxLength={60}
           placeholder={"Enter name and surname"}
           error={fullnameError}
           onBlur={handleError}
@@ -144,6 +145,7 @@ function AddLink() {
           onKeyDown={handleKeyPress}
           name={"country"}
           title={"Country"}
+          maxLength={40}
           placeholder={"Enter a country"}
           error={countryError}
           onBlur={handleError}
@@ -158,6 +160,7 @@ function AddLink() {
           onKeyDown={handleKeyPress}
           name={"city"}
           title={"City"}
+          maxLength={40}
           placeholder={"Enter a city"}
           error={cityError}
           onBlur={handleError}

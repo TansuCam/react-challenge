@@ -1,13 +1,13 @@
 import * as React from "react";
 import LocationIcon from "./icons/LocationIcon";
 
-function SearchResult({ data, listPage = false }) {
+function Search({ data, listPage = false }) {
   const val = data;
 
   return (
     <div key={val[0]} className="search-result d-flex align-items-center mt-2">
       <LocationIcon></LocationIcon>
-      <div className="search-detail ms-2">
+      <div className="ms-2">
         <span>{val[1]}</span>
         <br />
         <span>
@@ -26,4 +26,4 @@ function SearchResult({ data, listPage = false }) {
   );
 }
 
-export default SearchResult;
+export default Search;

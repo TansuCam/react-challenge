@@ -4,7 +4,7 @@ import Button from "./Button";
 import Logo from "./img/tesodev.png";
 import FooterImg from "./img/footerImg.png";
 import Slider from "./Slider";
-import SearchBar from "./SearchBar";
+import SearchBar from "./SearchResult";
 import "./styles/Landing.css";
 
 function Landing() {

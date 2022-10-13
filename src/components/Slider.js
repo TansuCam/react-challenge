@@ -30,6 +30,9 @@ const Slider = () => {
         <SliderItems />
         <SliderItems />
         <SliderItems />
+        <SliderItems />
+        <SliderItems />
+        <SliderItems />
       </div>
       <div className="">
         <button className="next-btn" onClick={btnpressnext}>

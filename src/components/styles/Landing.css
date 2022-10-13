@@ -23,3 +23,10 @@ footer {
   font-weight: 700;
   margin-top: 10px;
 }
+.hr-landing {
+  height: 1px;
+  background-color: #ccc;
+  border: none;
+  width: 85%;
+  margin-left: 80px;
+}

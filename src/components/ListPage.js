@@ -1,9 +1,10 @@
 import * as React from "react";
-import SearchBar from "./SearchBar";
+import SearchBar from "./SearchResult";
 import Button from "./Button";
 
 import Logo from "./img/tesodev.png";
-import "./styles/Search.css";
+//import "./styles/Search.css";
+import "./styles/ListPage.css";
 import { useLocation, Link } from "react-router-dom";
 
 function SearchResult() {

@@ -55,7 +55,12 @@ function SearchList({ data, searchWord, listPage = false }) {
       {!listPage && (
         <div className="search-list">
           {sliceData.map((val, index) => {
-            return <Search key={index} data={val}></Search>;
+            return (
+              <>
+                <Search key={index} data={val}></Search>
+                <hr className="hr-landing"></hr>
+              </>
+            );
           })}
           {data.length > 3 && (
             <div className="d-flex justify-content-center mt-3">
@@ -72,7 +77,6 @@ function SearchList({ data, searchWord, listPage = false }) {
       )}
       {listPage && (
         <div className="result-list">
-          {/* jhj */}
           {dataPagination.map((val, index) => {
             return (
               <>
@@ -102,7 +106,9 @@ function SearchList({ data, searchWord, listPage = false }) {
             );
           })}
           <div className="d-flex pagination-container">
-            <button onClick={prev}>Previous</button>
+            <button className="px-4" onClick={prev}>
+              Previous
+            </button>
             {(totalNumber < 7 && (
               <>
                 {[...Array(totalNumber)].map((number, index) => (
@@ -164,7 +170,9 @@ function SearchList({ data, searchWord, listPage = false }) {
               </>
             )}
 
-            <button onClick={next}>Next</button>
+            <button className="px-4" onClick={next}>
+              Next
+            </button>
           </div>
         </div>
       )}

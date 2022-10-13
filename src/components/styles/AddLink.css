@@ -1,0 +1,84 @@
+.addlink .form-text {
+  height: 10px;
+  color: red;
+}
+.addlink form {
+  margin-left: 230px;
+  margin-top: 50px;
+  width: 600px;
+}
+
+.addlink .form-control {
+  width: 600px;
+}
+.error label {
+  color: red !important;
+}
+.error input {
+  border: 2px solid red !important;
+}
+.input-custom label {
+  font-size: 18px;
+  font-weight: 700;
+  color: #686868;
+}
+.input-custom ::placeholder {
+  color: rgba(100, 100, 100, 0.5);
+  size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+}
+.alert {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 375px;
+  height: 123px;
+  border-radius: 8px;
+  background: #c4c4c4;
+  border: none;
+  color: black;
+}
+.form-control {
+  border: 1.5px solid #484848;
+  border-radius: 8px;
+  height: 46px;
+}
+
+.form-control:hover {
+  border: 2px solid #48484899;
+  background: rgba(100, 100, 100, 0.08);
+}
+.form-control:focus {
+  border: 2px solid rgba(32, 64, 128, 1);
+  box-shadow: none;
+}
+.alert .btn-close {
+  border: 1px solid black;
+  padding: 7px;
+  margin: 10px;
+  border-radius: 50px;
+  font-size: 8px;
+  color: black;
+  opacity: 1;
+}
+.alert span {
+  position: absolute;
+  right: 30px;
+  height: 32px;
+  top: 45px;
+  background: #ff4e78;
+  padding: 3px;
+  color: white;
+  border-radius: 48px;
+  width: 70px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+.alert strong {
+  font-size: 14px;
+}
+.alert p {
+  font-size: 13px;
+}

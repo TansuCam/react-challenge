@@ -5,7 +5,7 @@ function InputGroup(props) {
       <label className="form-label">{props.title}</label>
       <input
         onKeyDown={props.onKeyDown}
-        maxLength="60"
+        maxLength={props.maxLength}
         autoComplete="off"
         name={props.name}
         type="text"
