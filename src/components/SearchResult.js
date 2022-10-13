@@ -72,11 +72,15 @@ function SearchResult({ placeholder, value, listPage = false, onClick }) {
         />
         {listPage ? (
           <div onClick={search}>
-            <Button>Search</Button>
+            <Button disabled={searchWord.length >= 2 ? false : true}>
+              Search
+            </Button>
           </div>
         ) : (
           <div onClick={seeMore}>
-            <Button>Search</Button>
+            <Button disabled={searchWord.length >= 2 ? false : true}>
+              Search
+            </Button>
           </div>
         )}
       </div>
