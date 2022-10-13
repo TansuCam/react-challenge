@@ -4,7 +4,7 @@ import Button from "./Button";
 import Logo from "./img/tesodev.png";
 import FooterImg from "./img/footerImg.png";
 import Slider from "./Slider";
-import SearchBar from "./SearchResult";
+import SearchResult from "./SearchResult";
 import "./styles/Landing.css";
 
 function Landing() {
@@ -24,7 +24,7 @@ function Landing() {
       </div>
       <div className="search-div">
         <h3 className="bold-text-1">Find in records</h3>
-        <SearchBar placeholder="Search"></SearchBar>
+        <SearchResult placeholder="Search"></SearchResult>
       </div>
       <p className="top-news">Top News</p>
       <div className="d-flex justify-content-center ">

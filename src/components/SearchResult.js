@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./styles/Search.css";
 import Button from "./Button";
 import SearchList from "./SearchList";
@@ -6,11 +7,12 @@ import SearchIcon from "./icons/SearchIcon";
 import FilterIcon from "./icons/FilterIcon";
 var mockData = require("../mockData.json");
 
-function SearchBar({ placeholder, value, listPage = false }) {
+function SearchResult({ placeholder, value, listPage = false, onClick }) {
   const style = {
     width: "100%",
     gridGap: "6px",
   };
+  const navigate = useNavigate();
   const [sort, setSort] = useState("");
   const [filteredData, setFilteredData] = useState([]);
   const [searchWord, setSearchWord] = useState(value ? value : "");
@@ -18,6 +20,12 @@ function SearchBar({ placeholder, value, listPage = false }) {
   useEffect(() => {
     search();
   }, [searchWord]);
+
+  const seeMore = () => {
+    navigate("/listpage", {
+      state: { dataList: filteredData, searchWord: searchWord },
+    });
+  };
 
   useEffect(() => {
     const dataArray = [...filteredData];
@@ -57,14 +65,20 @@ function SearchBar({ placeholder, value, listPage = false }) {
         <input
           autoComplete="off"
           type="text"
-          className="form-control searchbarrr"
+          className="form-control"
           placeholder={placeholder}
           value={searchWord}
           onChange={(e) => setSearchWord(e.target.value)}
         />
-        <div onClick={search}>
-          <Button>Search</Button>
-        </div>
+        {listPage ? (
+          <div onClick={search}>
+            <Button>Search</Button>
+          </div>
+        ) : (
+          <div onClick={seeMore}>
+            <Button>Search</Button>
+          </div>
+        )}
       </div>
       {listPage && (
         <div className="dropdown" tabIndex="1">
@@ -119,4 +133,4 @@ function SearchBar({ placeholder, value, listPage = false }) {
   );
 }
 
-export default SearchBar;
+export default SearchResult;

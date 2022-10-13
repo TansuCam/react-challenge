@@ -62,7 +62,7 @@ function SearchList({ data, searchWord, listPage = false }) {
               </>
             );
           })}
-          {data.length > 3 && (
+          {data.length > 2 && (
             <div className="d-flex justify-content-center mt-3">
               <button
                 onClick={() => {
